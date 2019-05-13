@@ -55,7 +55,7 @@ ROOT_URLCONF = 'django_twitter_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['django_twitter_project/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,3 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_URL = '/twitter_oauth/dance'
+POST_TWAUTH_URL = '/index'
