@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url('twitter_oauth/', include('django_twitter_auth.urls')),
     url('twitter/', include('django_twitter_mining.urls')),
+    url(r'^logout/$', views.logout),
 ]

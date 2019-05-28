@@ -1,24 +1,8 @@
-<html>
-    <head>
-        <title>Twitter Dashboard</title>
-    </head>
-    <body>
+{% extends 'dashboard.html' %}
+{% block title %}Twitter Dashboard{% endblock title %}
 
-        <h1>Welcome to Twitter Dashboard</h1>
+{% block dashboard_title %} Dashboard{% endblock dashboard_title %}
 
-        <p>Here are a few things you can do with Twitter data. </p>
-
-        <ul>
-            <li><a href="search/">Search</a></li>
-            <li><a href="stream/">Stream</a></li>
-            <li><a href="search_popular/">Search Popular</a></li>
-            <li><a href="trends/">Search Trends</a></li>
-        </ul>
-
-        <p>Go to <a href="https://www.twitter.com/">Twitter</a>.</p>
-
-        <hr>
-        <p><a href="index">Home</a></p>
-
-    </body>
-</html>
+{% block content %}
+    <h1 class="h3">TBD! Page is under development.</h1>
+{% endblock content %}
