@@ -69,7 +69,10 @@ body {
 }
 
 .navbar .form-control {
-  padding: .75rem 1rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+  padding: .50rem 1rem;
   border-width: 0;
   border-radius: 0;
 }
