@@ -21,6 +21,7 @@ from django_twitter_project import views
 
 urlpatterns = [
     url(r'^index$', views.index),
+    url(r'^$', views.index),
     path('admin/', admin.site.urls),
     url('twitter_oauth/', include('django_twitter_auth.urls')),
     url('twitter/', include('django_twitter_mining.urls')),
