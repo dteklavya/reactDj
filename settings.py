@@ -23,6 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_z!0r6!^(ob20i$((ds847fx)(jk$0q)%37a6(ywk*j$+sbee$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting
+# in production environments!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_twitter_auth',
     'django_twitter_project',
+    'django_twitter_mining',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_URL = '/twitter_oauth/dance'
 POST_TWAUTH_URL = '/index'
+
+# Celery App specific settings
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
